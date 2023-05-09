@@ -1,0 +1,42 @@
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+
+  align-items: center;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav.li {
+  position: absolute;
+  left: 0;
+}
+
+nav li.login {
+  position: absolute;
+  right: 20px;
+}
+
+nav li.login a {
+  background-color: #fff;
+  color: #333;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+nav li.login a:hover {
+  background-color: #ddd;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}

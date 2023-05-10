@@ -20,6 +20,7 @@ app.post("/addFav/:id", (req, res) => {
       user && !user.favs.map(String).includes(String(id))
         ? user.update({ favs: [...user.favs, id] })
         : res.send("esta pelicula ya esta en tus favoritos");
+      res.send(user);
     })
     .catch((err) => console.error(err));
 });
@@ -39,7 +40,7 @@ app.delete("/removeFav/:id", (req, res) => {
       }
 
       user.update({ favs }).then(() => {
-        res.send("Película eliminada de tus favoritos");
+        res.send(user);
       });
     })
     .catch((err) => {

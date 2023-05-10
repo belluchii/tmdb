@@ -1,8 +1,13 @@
+*::placeholder {
+  color: #fff;
+}
+
 nav {
-  background-color: #333;
+  font-size: 20px;
+
+  width: 100%;
   color: #fff;
   display: flex;
-
   align-items: center;
   padding: 1rem;
 }
@@ -10,30 +15,48 @@ nav {
 nav ul {
   display: flex;
   list-style: none;
-  margin: 0;
+  margin-right: 10px;
   padding: 0;
 }
 
-nav.li {
-  position: absolute;
-  left: 0;
+.inicio {
+  position: relative;
+  margin-left: 20px;
+  top: -20px;
 }
-
 nav li.login {
+  display: flex;
+  align-items: center;
   position: absolute;
-  right: 20px;
+  right: 60px;
+  top: 10px;
 }
 
-nav li.login a {
-  background-color: #fff;
-  color: #333;
-  border-radius: 0.25rem;
-  padding: 0.5rem;
+nav li.login input {
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 5px;
+  color: #fff;
+  text-align: center;
+}
+nav li.login input:focus {
+  outline: none;
+}
+
+nav li.login * p {
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 7px;
+  text-align: center;
   margin-left: 1rem;
 }
 
-nav li.login a:hover {
-  background-color: #ddd;
+.signUp {
+  margin: 5px;
+  padding: 7px;
+  border-radius: 10px;
+  border: 2px solid #fff;
 }
 
 a {

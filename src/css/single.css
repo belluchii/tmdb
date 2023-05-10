@@ -1,0 +1,35 @@
+.single {
+  background: #0003;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 600px;
+  width: 800px;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 3px #0009;
+}
+
+.infoCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single * {
+  margin: 5px 20px;
+}
+h2 {
+  width: 100%;
+  font-size: 30px;
+}
+img {
+  width: 250px;
+}
+
+.info * {
+  font-size: 20px;
+  margin: 20px 0px;
+}

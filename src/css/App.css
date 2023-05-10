@@ -1,5 +1,10 @@
-.App {
-  text-align: center;
+body {
+  font-family: "IM Fell French Canon SC", serif;
+  background-image: url("../utils/20th.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
 }
 
 .seleccionada {
@@ -7,15 +12,76 @@
   left: 0;
 }
 
+.h1-container {
+  display: flex;
+  justify-content: center;
+  transform: translateY(20px);
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  color: #f006;
+  position: relative;
+  font-size: 100px;
+  left: 5vh;
+  top: 12vh;
+}
+
+.grid-center {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.grid-container {
+  background: linear-gradient(#0003, #fff1);
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 3px #0009;
+  display: grid;
+  grid-template-columns: repeat(5, 250px);
+  grid-gap: 20px;
+}
+
+.grid-item:nth-child(n + 11) {
+  display: none;
+}
+
+.grid-item {
+  margin: 0px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 350px;
+}
+
+.grid-item img {
+  max-height: 100%;
+  max-width: 80%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+.Links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+img {
+  box-shadow: 6px 6px 6px #0009;
+  border-radius: 20px;
 }
 
 .App-header {
@@ -44,4 +110,8 @@
 
 .d-none {
   display: none;
+}
+
+button:hover {
+  cursor: pointer;
 }

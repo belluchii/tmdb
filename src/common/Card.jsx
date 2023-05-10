@@ -1,27 +1,25 @@
+import { Link } from "react-router-dom";
 let Card = ({ movies, handlers }) => (
   <>
-    {movies.results &&
+    {movies && movies.results ? (
       movies.results.map((movie, x) => (
-        <div key={x || 100}>
-          <button
-            onClick={(e) => {
-              handlers[0]([e.target.className, e.target.id]);
-            }}
-            className={movie.poster_path}
-            id={movie.id}
-          >
-            {movie.title}
-          </button>
+        <div key={x || 100} className="grid-item">
+          <Link className="Links" to={`/movies/${movie.id}`}>
+            <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
+          </Link>
           <button
             id={movie.id}
             onClick={(e) => {
-              handlers[1](e);
+              handlers(e);
             }}
           >
             ♥
           </button>
         </div>
-      ))}
+      ))
+    ) : (
+      <h1>No hay contenido</h1>
+    )}
   </>
 );
 
